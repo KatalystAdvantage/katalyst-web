@@ -1,0 +1,18 @@
+﻿@{
+    List<string> ALL_PAGES = new List<string> {
+        "Main",
+        "About",
+        "People"
+    };
+}
+@if (ViewBag.Crawler)
+{
+    @Html.Partial($"{ViewBag.Route.View}/{ViewBag.Route.SubView}")
+}
+else
+{
+    foreach (string page in ALL_PAGES)
+    {
+        @Html.Partial($"{ViewBag.Route.View}/{page}")
+    }
+}

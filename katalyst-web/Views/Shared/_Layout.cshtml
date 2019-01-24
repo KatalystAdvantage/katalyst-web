@@ -1,0 +1,45 @@
+﻿@{ 
+    string BaseURL = "https://www.katalyst.com/";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name=google-site-verification content=NPMaiSL11lRg2xVFtsNJeT7IXNd27FgAUoIDQe7g-HI>
+    <meta name="description" content="@ViewBag.route.PageDescription" />
+    <link rel="canonical" href="@(BaseURL)@ViewBag.Route.Url" />
+    <title>@ViewBag.Route.PageTitle</title>
+    <link href="/Content/style/css/style.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 8]>
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/ie8")
+    <![endif]-->
+</head>
+<body class="is-@ViewBag.Route.ParentPage">
+
+    @Html.Partial("_Header")
+
+    @RenderBody()
+
+    @Html.Partial("_Footer")
+
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/foot/")
+    @RenderSection("scripts", required: false)
+    <div class="b-landscape-mode js-landscape-mode"></div>
+    <script type="text/javascript">
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var pageURL = decodeURIComponent(window.location.search.substring(1));
+        var pageURLVariables = pageURL.split('&');
+        var paramName;
+        for (var i = 0; i < pageURLVariables.length; i++) {
+            paramName = pageURLVariables[i].split('=');
+            if (paramName[0] === sParam) {
+                return paramName[1] === undefined ? true : paramName[1];
+            }
+        }
+    };
+
+    </script>
+</body>
+</html>
