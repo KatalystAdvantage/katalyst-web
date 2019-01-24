@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Katalyst.Routing;
 
-namespace ktalyst_web
+namespace katalyst_web
 {
     public class RouteConfig
     {
