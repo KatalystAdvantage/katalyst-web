@@ -1,0 +1,45 @@
+﻿urlNavHelper.parseRoutes( [
+  {
+    "PageName": "Main",
+    "ParentPage": "Home",
+    "Url": "",
+    "View": "Home",
+    "SubView": "Main",
+    "Controller": "StaticPage",
+    "Method": "StaticPage",
+    "PageTitle": "",
+    "PageDescription": ""
+  },
+  {
+    "PageName": "About",
+    "ParentPage": "Home",
+    "Url": "",
+    "View": "Home",
+    "SubView": "About",
+    "Controller": "StaticPage",
+    "Method": "StaticPage",
+    "PageTitle": "",
+    "PageDescription": ""
+  },
+     {
+    "PageName": "People",
+    "ParentPage": "Home",
+    "Url": "",
+    "View": "Home",
+    "SubView": "People",
+    "Controller": "StaticPage",
+    "Method": "StaticPage",
+    "PageTitle": "",
+    "PageDescription": ""
+  },
+  {
+    "PageName": "error_404",
+    "ParentPage": "",
+    "Url": "error/",
+    "View": "Error",
+    "Controller": "StaticPage",
+    "Method": "Http404",
+    "PageTitle": "",
+    "PageDescription": ""
+  }
+]);
