@@ -174,10 +174,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\js\vendor\jquery-1.10.2.min.map" />
     <Content Include="routing.jsonp" />
-    <Content Include="Content\style\sass\global\global.scss" />
+    <Content Include="Content\style\sass\global\variables.scss" />
     <Content Include="Content\style\sass\global\bootstrap-grid.scss" />
     <Content Include="Content\style\sass\style.scss" />
-    <Content Include="Content\style\sass\pages\home.scss" />
+    <Content Include="Content\style\sass\sections\home.scss" />
     <Content Include="Content\style\sass\components\header.scss" />
     <Content Include="Content\style\sass\components\footer.scss" />
     <Content Include="Web.config" />
@@ -193,10 +193,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Views\StaticPage\Home\Main.cshtml" />
-    <Content Include="Views\StaticPage\Home\About.cshtml" />
-    <Content Include="Views\StaticPage\Home\People.cshtml" />
+    <Content Include="Views\StaticPage\Home\Change.cshtml" />
+    <Content Include="Views\StaticPage\Home\Home.cshtml" />
+    <Content Include="Views\StaticPage\Home\Services.cshtml" />
     <Content Include="Views\StaticPage\Home.cshtml" />
+    <Content Include="Views\StaticPage\Home\Team.cshtml" />
+    <Content Include="Views\StaticPage\Home\Clients.cshtml" />
+    <Content Include="Views\StaticPage\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -209,6 +212,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Content\style\sass\sections\landing.scss" />
+    <Content Include="Content\style\sass\sections\change.scss" />
+    <Content Include="Content\style\sass\sections\team.scss" />
+    <Content Include="Content\style\sass\sections\clients.scss" />
+    <Content Include="Content\style\sass\sections\contact.scss" />
+    <Content Include="Content\style\sass\global\mixins.scss" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
