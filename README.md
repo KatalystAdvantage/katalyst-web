@@ -4,6 +4,7 @@
 
 Code style
 - SMACSS used for CSS structure
+- Accessibility LEVEL A, at minimum. AA is preferred whereever possible.
 
 Tech used
 - Node 6.7.0
