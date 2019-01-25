@@ -2,7 +2,8 @@
 /*   IMPORT MIXINS + VARIABLES/FONTS   ========================================================== */
 /*=============================================================================================== */
 @import "global/bootstrap-grid.scss";
-@import "global/global.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
 
 /*=============================================================================================== */
 /*   IMPORT COMPONENTS   ======================================================================== */
@@ -13,4 +14,9 @@
 /*=============================================================================================== */
 /*   IMPORT PAGES   ============================================================================= */
 /*=============================================================================================== */
-@import "pages/home.scss";
+@import "sections/landing.scss";
+@import "sections/home.scss";
+@import "sections/change.scss";
+@import "sections/team.scss";
+@import "sections/clients.scss";
+@import "sections/contact.scss";
