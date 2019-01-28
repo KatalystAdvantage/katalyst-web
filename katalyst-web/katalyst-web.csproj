@@ -159,6 +159,7 @@
   <ItemGroup>
     <Content Include="Content\js\katalyst\main.js" />
     <None Include="Content\js\vendor\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\js\katalyst\modules\_header.js" />
     <Content Include="Content\js\katalyst\modules\_urlnav.js" />
     <Content Include="Content\js\vendor\jquery-1.10.2.js" />
     <Content Include="Content\js\vendor\jquery-1.10.2.min.js" />
@@ -177,7 +178,7 @@
     <Content Include="Content\style\sass\global\variables.scss" />
     <Content Include="Content\style\sass\global\bootstrap-grid.scss" />
     <Content Include="Content\style\sass\style.scss" />
-    <Content Include="Content\style\sass\sections\home.scss" />
+    <Content Include="Content\style\sass\sections\main.scss" />
     <Content Include="Content\style\sass\components\header.scss" />
     <Content Include="Content\style\sass\components\footer.scss" />
     <Content Include="Web.config" />
@@ -205,8 +206,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
     <Folder Include="Content\img\" />
-    <Folder Include="Content\js\style\css\" />
-    <Folder Include="Content\js\style\sass\" />
     <Folder Include="Content\style\css\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -218,6 +217,8 @@
     <Content Include="Content\style\sass\sections\clients.scss" />
     <Content Include="Content\style\sass\sections\contact.scss" />
     <Content Include="Content\style\sass\global\mixins.scss" />
+    <Content Include="Content\style\sass\global\base.scss" />
+    <Content Include="Content\style\sass\sections\services.scss" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>

@@ -1,2 +1,6 @@
-﻿body {
+﻿section {
+    &[data-section="contact"]{
+        background: url('../../img/bg/bg-3.jpg') no-repeat top center;
+        background-size:cover;
+    }
 }
