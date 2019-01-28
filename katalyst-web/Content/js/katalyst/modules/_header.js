@@ -8,7 +8,7 @@
     init: function () {
         headerHelper.initScrollHide();
         headerHelper.initMobileNav();
-        headerHelper.fullscreenSections();
+        headerHelper.collapseMainToNav();
     },
 
 
@@ -26,29 +26,52 @@
         });
     },
 
-    fullscreenSections: function(){
+    collapseMainToNav: function(){
         //offset the fullscreen dimensions by whatever the header height is
+
         let $main = $('main'),
-            $mainHeight = $main.height() - headerHelper.getHeaderHeight(),
-            $section = $('section'),
-            $sectionHeight = $section.height();
+            $section01 = $('[data-section="change"]'),
+            $mainHeight = $main.height();
 
-        $main.css({'height': $mainHeight, 'margin-top':headerHelper.getHeaderHeight() })
 
-        console.log($mainHeight);
-        console.log($sectionHeight);
+
+            // offset change margin-top by main height
+
+            if($("html:not([data-scroll='0'])")){
+                console.log('it worked!');
+                $section01Offset = $section01.css('margin-top', $mainHeight);
+
+            };
+
+    
+
+
+
+
+        document.addEventListener('scroll', () => {
+            document.documentElement.dataset.scroll = window.scrollY;
+        });
+
     },
 
+
+
+
+
+    //TODO: clean this up
     checkScroll: function(){
         if (!$('body').hasClass('starting-right')) {
             if ($('.js-header').hasClass('scroll-lock') || (window.innerWidth < 768 && window.location.search.indexOf('edmode') > -1)) {
                 return false;
             }
+
             var currentScroll = $(window).scrollTop();
+
             if (currentScroll <= 0 || currentScroll > ($(document).height() - $(window).height() - 100)) {
                 $('.js-btn-page-nav').removeClass('hover');
                 return false;
             }
+
             if (currentScroll > (headerHelper.previousScroll + 5) && currentScroll > headerHelper.getHeaderHeight() && !headerHelper.preventScrollHide) {
                 if (!$('.js-mobile-nav').hasClass('is-visible')) {
                     headerHelper.hideHeader();

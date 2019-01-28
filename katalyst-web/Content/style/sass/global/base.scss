@@ -5,7 +5,10 @@ body {
 
 section, main {
     height: 100vh;
+    width: 100vw;
     background: red;
+    transition: height 0.5s ease-in;
+
 }
 
 h1, h2, h3, h4, {
