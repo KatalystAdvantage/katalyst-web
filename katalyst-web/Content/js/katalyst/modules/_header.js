@@ -6,7 +6,6 @@
     hoverTimeout: null,
 
     init: function () {
-        headerHelper.initScrollHide();
         headerHelper.initMobileNav();
         headerHelper.collapseMainToNav();
     },
@@ -20,45 +19,43 @@
 		});
 	},
 
-    initScrollHide: function () {
+
+    getHeaderHeight: function (include_margins) {
+        if (headerHelper.isHeaderHidden()) {
+                return 0;
+        }
+        return $('.js-header:visible').outerHeight();
+    },
+
+    collapseMainToNav: function(){
+        let $main = $('main'),
+            $section01 = $('[data-section="change"]'),
+            $mainHeight = $main.height();
+
+            // offset the first subsection margin-top by main section height
+            if($("html:not([data-scroll='0'])")){
+                $section01Offset = $section01.css('padding-top', $mainHeight + 20);
+
+            };
+
+        document.addEventListener('scroll', () => {
+            document.documentElement.dataset.scroll = window.scrollY;
+        });
+ 
+    },
+
+
+
+
+
+    //TODO: determine if needed, else delete
+
+       initScrollHide: function () {
         $(window).scroll(function () {
             headerHelper.checkScroll();
         });
     },
 
-    collapseMainToNav: function(){
-        //offset the fullscreen dimensions by whatever the header height is
-
-        let $main = $('main'),
-            $section01 = $('[data-section="change"]'),
-            $mainHeight = $main.height();
-
-
-
-            // offset change margin-top by main height
-
-            if($("html:not([data-scroll='0'])")){
-                console.log('it worked!');
-                $section01Offset = $section01.css('margin-top', $mainHeight);
-
-            };
-
-    
-
-
-
-
-        document.addEventListener('scroll', () => {
-            document.documentElement.dataset.scroll = window.scrollY;
-        });
-
-    },
-
-
-
-
-
-    //TODO: clean this up
     checkScroll: function(){
         if (!$('body').hasClass('starting-right')) {
             if ($('.js-header').hasClass('scroll-lock') || (window.innerWidth < 768 && window.location.search.indexOf('edmode') > -1)) {
@@ -83,13 +80,6 @@
         }
     },
 
-    getHeaderHeight: function (include_margins) {
-        if (headerHelper.isHeaderHidden()) {
-                return 0;
-        }
-
-        return $('.js-header:visible').outerHeight();
-    },
 
     hideHeader: function () {
         if (!$('.js-header').hasClass('is-hidden')) {

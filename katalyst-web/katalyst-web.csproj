@@ -157,6 +157,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\bg\bg-1.jpg" />
+    <Content Include="Content\img\bg\bg-2.jpg" />
+    <Content Include="Content\img\bg\bg-3.jpg" />
+    <Content Include="Content\img\katalyst-logo.png" />
     <Content Include="Content\js\katalyst\main.js" />
     <None Include="Content\js\vendor\jquery-1.10.2.intellisense.js" />
     <Content Include="Content\js\katalyst\modules\_header.js" />
@@ -171,6 +175,7 @@
     <Content Include="Content\js\vendor\modernizr-2.6.2.js" />
     <Content Include="Content\js\vendor\respond.js" />
     <Content Include="Content\js\vendor\respond.min.js" />
+    <Content Include="Content\mp4\katalyst-logo.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\js\vendor\jquery-1.10.2.min.map" />
@@ -205,7 +210,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
-    <Folder Include="Content\img\" />
     <Folder Include="Content\style\css\" />
     <Folder Include="Models\" />
   </ItemGroup>

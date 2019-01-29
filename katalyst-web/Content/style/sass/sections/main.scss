@@ -1,14 +1,39 @@
-﻿ main {
+﻿main {
     &[data-section="main"]{
         background: url('../../img/bg/bg-1.jpg') no-repeat top center;
         background-size:cover;
         position: fixed;
         top: 0;
+        z-index: 0;
+        outline: 1px solid yellow;
+
+        .m-title {
+            background: url('../../img/katalyst-logo.png') no-repeat top center;
+            margin: 100px auto;
+            width: 902px;
+            height: 82px;
+            display: block;
+            outline: 1px solid pink;
+            text-indent: -999px; // todo a11y mixin;
+        }
+  
+        
+        
     }
 }
 
-html:not([data-scroll='0']) main {
-    height: 60px;
-    transition: height 0.5s ease-in;
-  }
-  
+html:not([data-scroll='0']){
+    main {
+        height: 60px;
+      }
+
+      header {
+          opacity: 1;
+          transition: opacity 1s ease-in;
+
+      }
+} 
+
+
+
+
