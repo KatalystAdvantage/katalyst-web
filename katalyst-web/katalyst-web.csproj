@@ -164,6 +164,7 @@
     <Content Include="Content\img\katalyst-logo.png" />
     <Content Include="Content\js\katalyst\main.js" />
     <None Include="Content\js\vendor\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\js\katalyst\modules\_awards.js" />
     <Content Include="Content\js\katalyst\modules\_header.js" />
     <Content Include="Content\js\katalyst\modules\_urlnav.js" />
     <Content Include="Content\js\vendor\jquery-1.10.2.js" />

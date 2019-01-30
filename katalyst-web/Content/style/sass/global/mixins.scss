@@ -13,7 +13,18 @@ $desktop-width: 1024px;
   }
 }
 
-// @mixin offscreen-text {
-//   position: absolute !important;
-//   clip: rect(1px, 1px, 1px, 1px);
-// }
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes Pulse {
+  0%, 100% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 70px;
+  }
+}
