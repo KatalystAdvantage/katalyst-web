@@ -1,26 +1,66 @@
 ﻿main {
     &[data-section="main"]{
+        @include flexColumn;
         background: url('../../img/bg/bg-1.jpg') no-repeat top center;
         background-size:cover;
         position: fixed;
         top: 0;
         z-index: 0;
-        outline: 1px solid yellow;
+        overflow: hidden;
+
 
         .m-title {
-            background: url('../../img/katalyst-logo.png') no-repeat top center;
-            margin: 100px auto;
+            margin: 0px auto 45px;
             width: 902px;
             height: 82px;
             display: block;
-            outline: 1px solid pink;
-            text-indent: -999px; // todo a11y mixin;
+            img {
+                max-width: 100%;
+            }
         }
+
+        .m-subtitle {
+            font: 26px/1 $font-roboto;
+            display: block;
+            margin: 0 auto 100px; 
+            color: $brand-colour;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .m-awards {
+            border-top: 2px solid $brand-colour;
+            border-bottom: 2px solid $brand-colour;
+            padding: 10px 0;
+            width: 425px;
+            margin: 0 auto;
+            span {
+                font: 18px/1 $font-playfair;
+                color: #fff;
+                text-align: center;
+                display: block;
+            }
+        }
+
+        .m-down-arrow {
+            background: url('../../img/icon-arrow.png') no-repeat;
+            width: 29px;
+            height: 16px;
+            border: 0;
+            margin-top: 50px;
+            animation: Pulse 2s linear infinite;
+            position: absolute;
+            bottom: 0;    
+        }
+
+
   
-        
-        
+       
     }
 }
+
+
+
 
 html:not([data-scroll='0']){
     main {
