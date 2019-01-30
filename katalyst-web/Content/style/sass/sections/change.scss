@@ -5,10 +5,20 @@
     }
     #change-logo-animation {
         border: 1px solid black;
-        width: 700px;
-        height: 300px;
+        width: calc(595px/2);
+        height: calc(171px/2)();
         position: relative;
         z-index: 0;
+
+        @include tablet {
+
+        }
+
+        @include desktop {
+          width: 700px;
+          height: 300px;
+
+        }
         .dot {
             width: 42px;
             height: 42px;
