@@ -1,5 +1,5 @@
 ﻿main {
-    &[data-section="main"]{
+    &[data-page-section="main"]{
         @include flexColumn;
         background: url('../../img/bg/bg-1.jpg') no-repeat top center;
         background-size:cover;
@@ -22,7 +22,7 @@
         .m-subtitle {
             font: 26px/1 $font-roboto;
             display: block;
-            margin: 0 auto 100px; 
+            margin: 0 auto 100px;
             color: $brand-colour;
             text-align: center;
             text-transform: uppercase;
@@ -50,12 +50,10 @@
             margin-top: 50px;
             animation: Pulse 2s linear infinite;
             position: absolute;
-            bottom: 0;    
-        } 
+            bottom: 0;
+        }
     }
 }
-
-
 
 
 html:not([data-scroll='0']){
@@ -68,8 +66,7 @@ html:not([data-scroll='0']){
           transition: opacity 1s ease-in;
 
       }
-} 
-
+}
 
 
 
