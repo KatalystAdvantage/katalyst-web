@@ -160,6 +160,7 @@
     <Content Include="Content\img\bg\bg-1.jpg" />
     <Content Include="Content\img\bg\bg-2.jpg" />
     <Content Include="Content\img\bg\bg-3.jpg" />
+    <Content Include="Content\img\bg\bg-change-dot.png" />
     <Content Include="Content\img\katalyst-logo.png" />
     <Content Include="Content\js\katalyst\main.js" />
     <None Include="Content\js\vendor\jquery-1.10.2.intellisense.js" />
