@@ -5,7 +5,7 @@
         background-size:cover;
         position: fixed;
         top: 0;
-        z-index: 0;
+        z-index: 10;
         overflow: hidden;
 
 
@@ -51,11 +51,7 @@
             animation: Pulse 2s linear infinite;
             position: absolute;
             bottom: 0;    
-        }
-
-
-  
-       
+        } 
     }
 }
 

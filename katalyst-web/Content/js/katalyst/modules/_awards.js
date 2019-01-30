@@ -6,8 +6,12 @@
 
         setInterval(function () {
             count++;
-            $("#name").fadeOut(400, function () {
+            $("#js-awards-name").fadeOut(400, function () {
               $(this).text(awardsArray[count]).fadeIn(400);
+
+              if(count == awardsArray.length -1){
+                  count = 0;
+              }
             });
           }, 7000);
     }
