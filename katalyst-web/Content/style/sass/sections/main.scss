@@ -10,32 +10,51 @@
 
 
         .m-title {
+            width: calc(579px/2);
+            height: calc(52px/2);
             margin: 0px auto 45px;
-            width: 902px;
-            height: 82px;
             display: block;
+            
+            @include tablet{
+                width: 902px;
+                height: 82px;
+            }
+
             img {
                 max-width: 100%;
             }
         }
 
         .m-subtitle {
-            font: 26px/1 $font-roboto;
+            font: 14px/1 $font-roboto;
             display: block;
             margin: 0 auto 100px;
             color: $brand-colour;
             text-align: center;
             text-transform: uppercase;
+            width: 60%;
+            @include tablet {
+                font-size: 26px;
+                width: 100%;
+            }
+
         }
 
         .m-awards {
-            border-top: 2px solid $brand-colour;
-            border-bottom: 2px solid $brand-colour;
+            border-top: 1px solid $brand-colour;
+            border-bottom: 1px solid $brand-colour;
             padding: 10px 0;
-            width: 425px;
+            width: calc(545px/2);
             margin: 0 auto;
+            font: 13px/1 $font-playfair;
+
+            @include tablet {
+                width: 425px;
+                font-size: 18px;
+                border-width: 2px;
+            }
+
             span {
-                font: 18px/1 $font-playfair;
                 color: #fff;
                 text-align: center;
                 display: block;
