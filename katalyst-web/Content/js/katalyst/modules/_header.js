@@ -29,7 +29,7 @@
 
     collapseMainToNav: function(){
         let $main = $('main'),
-            $section01 = $('[data-section="change"]'),
+            $section01 = $('[data-page-section="change"]'),
             $mainHeight = $main.height();
 
             // offset the first subsection margin-top by main section height
@@ -41,7 +41,7 @@
         document.addEventListener('scroll', () => {
             document.documentElement.dataset.scroll = window.scrollY;
         });
- 
+
     },
 
 
@@ -57,27 +57,20 @@
     },
 
     checkScroll: function(){
-        if (!$('body').hasClass('starting-right')) {
-            if ($('.js-header').hasClass('scroll-lock') || (window.innerWidth < 768 && window.location.search.indexOf('edmode') > -1)) {
-                return false;
-            }
-
-            var currentScroll = $(window).scrollTop();
-
-            if (currentScroll <= 0 || currentScroll > ($(document).height() - $(window).height() - 100)) {
-                $('.js-btn-page-nav').removeClass('hover');
-                return false;
-            }
-
-            if (currentScroll > (headerHelper.previousScroll + 5) && currentScroll > headerHelper.getHeaderHeight() && !headerHelper.preventScrollHide) {
-                if (!$('.js-mobile-nav').hasClass('is-visible')) {
-                    headerHelper.hideHeader();
-                }
-            } else if (currentScroll < (headerHelper.previousScroll - headerHelper.hideAffordance)) {
-                headerHelper.unhideHeader();
-            }
-            headerHelper.previousScroll = currentScroll;
+        if ($('.js-header').hasClass('scroll-lock') || (window.innerWidth < 768 && window.location.search.indexOf('edmode') > -1)) {
+            return false;
         }
+
+        var currentScroll = $(window).scrollTop();
+
+        if (currentScroll > (headerHelper.previousScroll + 5) && currentScroll > headerHelper.getHeaderHeight() && !headerHelper.preventScrollHide) {
+            if (!$('.js-mobile-nav').hasClass('is-visible')) {
+                headerHelper.hideHeader();
+            }
+        } else if (currentScroll < (headerHelper.previousScroll - headerHelper.hideAffordance)) {
+            headerHelper.unhideHeader();
+        }
+        headerHelper.previousScroll = currentScroll;
     },
 
 
@@ -90,7 +83,6 @@
             }, 200);
 
             $('.js-header').addClass('is-hidden');
-            $('.js-btn-page-nav').removeClass('hover');
         }
     },
 
@@ -100,7 +92,6 @@
             $('.js-header').stop(true, true).animate({
                 'marginTop': 0
             }, 200);
-            $('.js-btn-page-nav').addClass('hover');
         }
     },
 
