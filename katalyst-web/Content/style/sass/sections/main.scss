@@ -16,6 +16,11 @@
             display: block;
             
             @include tablet{
+                // width: 902px;
+                // height: 82px;
+            }
+
+            @include desktop {
                 width: 902px;
                 height: 82px;
             }
@@ -35,7 +40,11 @@
             width: 60%;
             @include tablet {
                 font-size: 26px;
+            }
+            
+            @include desktop {
                 width: 100%;
+
             }
 
         }
