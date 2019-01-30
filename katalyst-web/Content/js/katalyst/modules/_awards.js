@@ -7,10 +7,9 @@
         setInterval(function () {
             count++;
             $("#name").fadeOut(400, function () {
-              $(this).text(awardsArray[count % awardsArray.length]).fadeIn(400);
+              $(this).text(awardsArray[count]).fadeIn(400);
             });
           }, 7000);
-
     }
 };
 
