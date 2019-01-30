@@ -11,29 +11,62 @@
     "PageDescription": ""
   },
   {
-    "PageName": "About",
+    "PageName": "Change",
     "ParentPage": "Home",
-    "Url": "",
+    "Url": "change/",
     "View": "Home",
-    "SubView": "About",
-    "Controller": "StaticPage",
-    "Method": "StaticPage",
-    "PageTitle": "",
-    "PageDescription": ""
-  },
-     {
-    "PageName": "People",
-    "ParentPage": "Home",
-    "Url": "",
-    "View": "Home",
-    "SubView": "People",
+    "SubView": "Change",
     "Controller": "StaticPage",
     "Method": "StaticPage",
     "PageTitle": "",
     "PageDescription": ""
   },
   {
-    "PageName": "error_404",
+    "PageName": "Services",
+    "ParentPage": "Home",
+    "Url": "services/",
+    "View": "Home",
+    "SubView": "Services",
+    "Controller": "StaticPage",
+    "Method": "StaticPage",
+    "PageTitle": "",
+    "PageDescription": ""
+  },
+  {
+    "PageName": "Team",
+    "ParentPage": "Home",
+    "Url": "team/",
+    "View": "Home",
+    "SubView": "Team",
+    "Controller": "StaticPage",
+    "Method": "StaticPage",
+    "PageTitle": "",
+    "PageDescription": ""
+  },
+  {
+    "PageName": "Clients",
+    "ParentPage": "Home",
+    "Url": "clients/",
+    "View": "Home",
+    "SubView": "Clients",
+    "Controller": "StaticPage",
+    "Method": "StaticPage",
+    "PageTitle": "",
+    "PageDescription": ""
+  },
+    {
+    "PageName": "Contact",
+    "ParentPage": "Home",
+    "Url": "contact/",
+    "View": "Home",
+    "SubView": "Contact",
+    "Controller": "StaticPage",
+    "Method": "StaticPage",
+    "PageTitle": "",
+    "PageDescription": ""
+  },
+  {
+    "PageName": "Error",
     "ParentPage": "",
     "Url": "error/",
     "View": "Error",
