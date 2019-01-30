@@ -12,3 +12,8 @@ $desktop-width: 1024px;
     @content;
   }
 }
+
+// @mixin offscreen-text {
+//   position: absolute !important;
+//   clip: rect(1px, 1px, 1px, 1px);
+// }
