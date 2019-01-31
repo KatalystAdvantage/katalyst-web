@@ -20,7 +20,7 @@ namespace katalyst_web
             ScriptBundle foot = new ScriptBundle("~/bundles/foot/");
             foot.Include("~/Content/js/vendor/modernizr-custom.js");
             foot.Include("~/Content/js/vendor/jquery-{version}.js");
-            foot.Include("~/Content/js/vendor/jquery.validate*");
+            foot.Include("~/Content/js/vendor/jquery.history*");
             foot.Include("~/Content/js/vendor/TweenMax.min.js");
             foot.IncludeDirectory("~/Content/js/katalyst/modules", "*.js", true);
             foot.Include("~/Content/js/katalyst/main.js");

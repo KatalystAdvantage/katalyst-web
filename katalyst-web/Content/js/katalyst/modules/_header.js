@@ -57,9 +57,6 @@
     },
 
     checkScroll: function(){
-        if ($('.js-header').hasClass('scroll-lock') || (window.innerWidth < 768 && window.location.search.indexOf('edmode') > -1)) {
-            return false;
-        }
 
         var currentScroll = $(window).scrollTop();
 
