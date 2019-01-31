@@ -1,6 +1,6 @@
 ﻿urlNavHelper.parseRoutes( [
   {
-    "PageName": "Main",
+    "PageName": "main",
     "ParentPage": "Home",
     "Url": "",
     "View": "Home",
@@ -11,9 +11,9 @@
     "PageDescription": ""
   },
   {
-    "PageName": "Change",
+    "PageName": "change",
     "ParentPage": "Home",
-    "Url": "change/",
+    "Url": "change",
     "View": "Home",
     "SubView": "Change",
     "Controller": "StaticPage",
@@ -22,9 +22,9 @@
     "PageDescription": ""
   },
   {
-    "PageName": "Services",
+    "PageName": "services",
     "ParentPage": "Home",
-    "Url": "services/",
+    "Url": "services",
     "View": "Home",
     "SubView": "Services",
     "Controller": "StaticPage",
@@ -33,9 +33,9 @@
     "PageDescription": ""
   },
   {
-    "PageName": "Team",
+    "PageName": "team",
     "ParentPage": "Home",
-    "Url": "team/",
+    "Url": "team",
     "View": "Home",
     "SubView": "Team",
     "Controller": "StaticPage",
@@ -44,9 +44,9 @@
     "PageDescription": ""
   },
   {
-    "PageName": "Clients",
+    "PageName": "clients",
     "ParentPage": "Home",
-    "Url": "clients/",
+    "Url": "clients",
     "View": "Home",
     "SubView": "Clients",
     "Controller": "StaticPage",
@@ -55,9 +55,9 @@
     "PageDescription": ""
   },
     {
-    "PageName": "Contact",
+    "PageName": "contact",
     "ParentPage": "Home",
-    "Url": "contact/",
+    "Url": "contact",
     "View": "Home",
     "SubView": "Contact",
     "Controller": "StaticPage",
@@ -66,9 +66,9 @@
     "PageDescription": ""
   },
   {
-    "PageName": "Error",
+    "PageName": "error",
     "ParentPage": "",
-    "Url": "error/",
+    "Url": "error",
     "View": "Error",
     "Controller": "StaticPage",
     "Method": "Http404",

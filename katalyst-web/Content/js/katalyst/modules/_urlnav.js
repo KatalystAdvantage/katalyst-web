@@ -1,13 +1,14 @@
 ﻿var urlNavHelper = {
     seoRoutes: [],
     preventScrollEvent: false,
+    $headerHeight: $(".js-header").outerHeight(),
     //$navSelector: $('.m-header-main-nav .subnav li'),
 
     init: function () {
         if (window.location.hash && $('#' + window.location.hash.substr(1) + ':visible').length) {
             urlNavHelper.handleInitialUrl(true);
             setTimeout(function () {
-                urlNavHelper.doInitialScroll($('#' + window.location.hash.substr(1)).offset().top - headerHelper.getHeaderHeight());
+                urlNavHelper.doInitialScroll($('#' + window.location.hash.substr(1)).offset().top - urlNavHelper.$headerHeight);
             }, 1);
         } else {
             urlNavHelper.handleInitialUrl();
@@ -15,12 +16,9 @@
     },
 
     parseRoutes: function (seoJson) {
+        console.log('parse')
         for (var i = 0; i < seoJson.length; i++) {
-            if (seoJson[i].IsDCGQuiz) {
-                urlNavHelper.quizPage = seoJson[i];
-            }
             if ($('[data-page-section=' + seoJson[i].PageName + ']').length) {
-
                 var index = urlNavHelper.seoRoutes.push(seoJson[i]) - 1;
                 urlNavHelper.seoRoutes[index].$section = $('[data-page-section=' + seoJson[i].PageName + ']');
                 urlNavHelper.seoRoutes[index].Url = '/' + urlNavHelper.seoRoutes[index].Url;
@@ -47,17 +45,15 @@
 
     handleInitialUrl: function (preventScroll) {
         $(window).on("load", function () {
+            console.log('handle initial url')
             var currentPath = window.location.pathname;
+            console.log(currentPath)
             for (var i = 0; i < urlNavHelper.seoRoutes.length; i++) {
                 if (currentPath == urlNavHelper.seoRoutes[i].Url) {
+					console.log("currentPath: " + currentPath)
+					console.log("urlnav route: " + urlNavHelper.seoRoutes[i].Url)
+
                     // Scroll to header only if other than first to account for CTA at the top
-                    if (i > 0) {
-                        //Prevent scroll event so that history does not get distorted by sections that get passed through on scoll
-                        //Also ignore scroll if checkedAnswer exist in the query string
-                        if (!preventScroll && window.location.search.indexOf("checkedAnswer") == -1) {
-                            urlNavHelper.doInitialScroll(urlNavHelper.seoRoutes[i].$section.offset().top - headerHelper.getHeaderHeight());
-                        }
-                    }
 
                     var currNavLink = $('.js-mobile-nav .subnav a[href="' + urlNavHelper.seoRoutes[i].Url + '"]');
                     currNavLink.parent().addClass('is-current');
@@ -79,7 +75,7 @@
             if (url == urlNavHelper.seoRoutes[i].Url) {
 
                 headerHelper.preventScrollHide = true;
-                smoothScroll.scrollTo(urlNavHelper.seoRoutes[i].$section.offset().top - headerHelper.getHeaderHeight(), null, function () {
+                smoothScroll.scrollTo(urlNavHelper.seoRoutes[i].$section.offset().top - urlNavHelper.$headerHeight, null, function () {
                     //Re enable scroll event
                     setTimeout(function () {
                         urlNavHelper.preventScrollEvent = false;
@@ -87,8 +83,8 @@
                     }, 100);
                 });
 
-                urlNavHelper.$navSelector.removeClass('is-current');
-                urlNavHelper.$navSelector.has('a[href="' + url + '"]').addClass('is-current');
+                // urlNavHelper.$navSelector.removeClass('is-current');
+                // urlNavHelper.$navSelector.has('a[href="' + url + '"]').addClass('is-current');
 
                 $('.js-mobile-nav').removeClass('is-visible');
 
@@ -101,25 +97,27 @@
 
     handleScroll: function () {
         $(window).on('scroll', function () {
+            console.log('scroll')
             if (urlNavHelper.preventScrollEvent === true || $('.js-header').hasClass('scroll-lock')) {
                 return;
             }
 
             var closestSectionIndex = -1;
-            var scrollPos = $(window).scrollTop() + headerHelper.getHeaderHeight(true) + 5;
+            var scrollPos = $(window).scrollTop() + urlNavHelper.$headerHeight + 5;
             var currentPath = window.location.pathname;
 
             for (var i = 0; i < urlNavHelper.seoRoutes.length; i++) {
-                if (scrollPos > urlNavHelper.seoRoutes[i].$section.offset().top) {
-                    if (closestSectionIndex == -1 || urlNavHelper.seoRoutes[i].$section.offset().top > urlNavHelper.seoRoutes[closestSectionIndex].$section.offset().top) {
+                if (scrollPos > urlNavHelper.seoRoutes[i].$section[0].offsetTop) {
+
+                    if (closestSectionIndex == -1 || urlNavHelper.seoRoutes[i].$section[0].offsetTop > urlNavHelper.seoRoutes[closestSectionIndex].$section[0].offsetTop) {
                         closestSectionIndex = i;
                     }
                 }
             }
 
             if (closestSectionIndex > -1) {
-                urlNavHelper.$navSelector.removeClass('is-current');
-                urlNavHelper.$navSelector.has('a[href="' + urlNavHelper.seoRoutes[closestSectionIndex].Url + '"]').addClass('is-current');
+                // urlNavHelper.$navSelector.removeClass('is-current');
+                // urlNavHelper.$navSelector.has('a[href="' + urlNavHelper.seoRoutes[closestSectionIndex].Url + '"]').addClass('is-current');
                 if (currentPath != urlNavHelper.seoRoutes[closestSectionIndex].Url) {
                     document.title = urlNavHelper.seoRoutes[closestSectionIndex].PageTitle;
                     History.pushState(null, document.title, urlNavHelper.seoRoutes[closestSectionIndex].Url + document.location.search);

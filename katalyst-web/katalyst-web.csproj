@@ -166,12 +166,15 @@
     <Content Include="Content\js\katalyst\main.js" />
     <Content Include="Content\js\katalyst\modules\_awards.js" />
     <Content Include="Content\js\katalyst\modules\_header.js" />
+    <Content Include="Content\js\katalyst\modules\_katalyst-logo-change.js" />
+    <Content Include="Content\js\katalyst\modules\_smoothscroll.js" />
     <Content Include="Content\js\katalyst\modules\_urlnav.js" />
     <Content Include="Content\js\vendor\jquery-3.3.1.min.map" />
     <None Include="Content\js\vendor\jquery-3.3.1.intellisense.js" />
     <Content Include="Content\js\vendor\jquery-3.3.1.js" />
     <Content Include="Content\js\vendor\jquery-3.3.1.min.js" />
-    <Content Include="Content\js\vendor\modernizr-2.6.2.js" />
+    <Content Include="Content\js\vendor\jquery.history.js" />
+    <Content Include="Content\js\vendor\modernizr-custom.js" />
     <Content Include="Content\js\vendor\respond.js" />
     <Content Include="Content\js\vendor\respond.min.js" />
     <Content Include="Content\mp4\katalyst-logo.mp4" />
