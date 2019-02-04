@@ -1,0 +1,11 @@
+.l-content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include mobile {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
