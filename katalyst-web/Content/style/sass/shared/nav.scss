@@ -1,0 +1,33 @@
+.m-nav {
+    @include val_prefix("display", "flex");
+    margin: 0;
+    padding: 0;
+}
+
+.m-nav-item {
+    &.home {
+        @include prefix("flex-grow", 1);
+
+        .nav-link {
+            width: 420px;
+            margin-right: 150px;
+            font-size: 0;
+        }
+    }
+}
+
+.m-nav-link {
+    color: $light-text;
+    text-transform: uppercase;
+    font-family: $font-roboto;
+    font-weight: 400;
+    font-size: $nav-size;
+    line-height: 25px;
+    padding: 17px 25px;
+    display: block;
+    &.active,
+    &:hover,
+    &:focus {
+        color: $brand-colour;
+    }
+}
