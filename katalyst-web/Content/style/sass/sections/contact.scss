@@ -30,12 +30,12 @@
                 color: $brand-colour;
                 font-weight: 700;
             }
+        }
 
-            &.address {
-                letter-spacing: 1px;
-                font-size: 0.8rem;
-                text-align: center;
-            }
+        .address {
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            text-align: center;
         }
 
         div {
@@ -55,6 +55,14 @@
                 &:last-of-type {
                     border-bottom: 1px solid #000;
                 }
+            }
+        }
+
+        a {
+            color: $dark-text;
+
+            &:hover {
+                color: $brand-colour;
             }
         }
     }
