@@ -32,28 +32,36 @@
             }
         }
 
-        .address {
-            letter-spacing: 1px;
-            font-size: 0.8rem;
-            text-align: center;
+        address {
+            &.address {
+                margin: 1.5rem 0;
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+                font-style: normal;
+                text-align: center;
+                & a {
+                    font-size: 0.8rem;
+                }
+            }
         }
 
         div {
             &.contact {
-                & p {
-                    margin: 0;
-
-                    &.email {
-                        font-style: italic;
-                    }
-                }
-
                 text-align: center;
                 margin: 0;
                 padding: 1rem;
                 border-top: 1px solid #000;
                 &:last-of-type {
                     border-bottom: 1px solid #000;
+                }
+
+                & a.email {
+                    display: block;
+                    font-style: italic;
+                }
+
+                & a.tel {
+                    display: block;
                 }
             }
         }
