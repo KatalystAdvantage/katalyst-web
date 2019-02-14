@@ -1,7 +1,7 @@
 ﻿section {
     &[data-page-section="contact"]{
         background: url('../../img/bg/bg-3.jpg') no-repeat top center;
-        background-size:cover;
+        background-size: cover;
         padding: 2.5rem;
         font-family: $font-roboto;
 
@@ -14,6 +14,7 @@
         h3 {
             font-family: $font-playfair;
             font-size: 1rem;
+            margin-top: 0.2rem;
         }
 
         hr {
