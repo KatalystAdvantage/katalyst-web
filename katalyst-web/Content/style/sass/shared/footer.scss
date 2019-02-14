@@ -1,4 +1,15 @@
 ﻿footer {
-  color: blue;
-  background: #fff;
+    @include flexColumn;
+    background: url('../../img/bg/bg-1.jpg') no-repeat top center;
+    background-size: cover;
+    color: #FFFFFF;
+    font-family: $font-roboto;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    padding: 3rem;
+
+    & img.katalyst-logo {
+        width: 300px;
+        max-width: 80vw;
+    }
 }
