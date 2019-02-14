@@ -1,0 +1,39 @@
+﻿.js-header {
+    position: fixed;
+    height: 60px;
+    background: url('../../img/bg/bg-1.jpg') no-repeat top center;
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index:100;
+    opacity: 0;
+    .m-nav {
+        @include val_prefix("display", "flex");
+        margin: 0;
+        padding: 0;
+    }
+    .m-nav-item.home {
+        @include prefix("flex-grow", 1);
+        .nav-link {
+            width: 420px;
+            margin-right: 150px;
+            font-size: 0;
+        }
+    }
+    .nav-link {
+        color: $light-text;
+        text-transform: uppercase;
+        font-family: $font-roboto;
+        font-weight: 400;
+        font-size: $nav-size;
+        line-height: 25px;
+        padding: 17px 25px;
+        display: block;
+        &.active,
+        &:hover {
+            color: $brand-colour;
+        }
+    }
+}
