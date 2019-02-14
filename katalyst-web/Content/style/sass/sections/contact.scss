@@ -1,6 +1,77 @@
 ﻿section {
     &[data-page-section="contact"]{
         background: url('../../img/bg/bg-3.jpg') no-repeat top center;
-        background-size:cover;
+        background-size: cover;
+        padding: 2.5rem;
+        font-family: $font-roboto;
+
+        h2 {
+            font-family: $font-roboto;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        h3 {
+            font-family: $font-playfair;
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        hr {
+            display: block;
+            border: 2px solid $brand-colour;
+            width: 10rem;
+            margin: 0;
+        }
+
+        p {
+            &.lead {
+                font-family: $font-playfair;
+                color: $brand-colour;
+                font-weight: 700;
+            }
+        }
+
+        address {
+            &.address {
+                margin: 1.5rem 0;
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+                font-style: normal;
+                text-align: center;
+                & a {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        div {
+            &.contact {
+                text-align: center;
+                margin: 0;
+                padding: 1rem;
+                border-top: 1px solid #000;
+                &:last-of-type {
+                    border-bottom: 1px solid #000;
+                }
+
+                & a.email {
+                    display: block;
+                    font-style: italic;
+                }
+
+                & a.tel {
+                    display: block;
+                }
+            }
+        }
+
+        a {
+            color: $dark-text;
+
+            &:hover {
+                color: $brand-colour;
+            }
+        }
     }
 }
