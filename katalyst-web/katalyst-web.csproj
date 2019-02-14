@@ -185,8 +185,6 @@
     <Content Include="Content\style\sass\global\bootstrap-grid.scss" />
     <Content Include="Content\style\sass\style.scss" />
     <Content Include="Content\style\sass\sections\main.scss" />
-    <Content Include="Content\style\sass\components\header.scss" />
-    <Content Include="Content\style\sass\components\footer.scss" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -224,6 +222,10 @@
     <Content Include="Content\style\sass\global\mixins.scss" />
     <Content Include="Content\style\sass\global\base.scss" />
     <Content Include="Content\style\sass\sections\services.scss" />
+    <Content Include="Content\style\sass\shared\footer.scss" />
+    <Content Include="Content\style\sass\shared\header.scss" />
+    <Content Include="Content\style\sass\shared\layout.scss" />
+    <Content Include="Content\style\sass\shared\nav.scss" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
