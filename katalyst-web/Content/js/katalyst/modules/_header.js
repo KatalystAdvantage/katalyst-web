@@ -7,7 +7,8 @@
 
     init: function () {
         headerHelper.initMobileNav();
-        headerHelper.collapseMainToNav();
+        // headerHelper.collapseMainToNav(); //NOTE: disabled until the rest of the site is built bc it was getting in the way.
+        headerHelper.offsetHomePage();
     },
 
 
@@ -27,18 +28,22 @@
         return $('.js-header:visible').outerHeight();
     },
 
-    collapseMainToNav: function(){
+    offsetHomePage: function () {
         let $main = $('main'),
-            $section01 = $('[data-page-section="change"]'),
             $mainHeight = $main.height(),
-            $logo = $('.m-title');
+            $section01 = $('[data-page-section="change"]');
 
-            // offset the first subsection margin-top by main section height
-            if($("html:not([data-scroll='0'])")){
-                $section01Offset = $section01.css('padding-top', $mainHeight + 20);
+        $section01Offset = $section01.css('padding-top', $mainHeight + 20);
+
+    },
+
+    collapseMainToNav: function(){
+        let $logo = $('.m-title');
+
+        // offset the first subsection margin-top by main section height
+        if($("html:not([data-scroll='0'])")){
+                headerHelper.offsetHomePage();  
                 $logo.css('transform', 'scale(0.7)');
-
-
             };
 
         document.addEventListener('scroll', () => {

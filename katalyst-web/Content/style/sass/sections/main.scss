@@ -1,5 +1,7 @@
 ﻿main {
     &[data-page-section="main"]{
+
+        display: none;
         @include flexColumn;
         background: url('../../img/bg/bg-1.jpg') no-repeat top center;
         background-size:cover;

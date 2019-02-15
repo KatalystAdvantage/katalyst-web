@@ -208,6 +208,7 @@
     <Content Include="Views\StaticPage\Home\Clients.cshtml" />
     <Content Include="Views\StaticPage\Home\Contact.cshtml" />
     <Content Include="Views\Shared\_Nav.cshtml" />
+    <Content Include="Views\Animations\_Logo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
