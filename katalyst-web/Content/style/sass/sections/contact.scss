@@ -5,45 +5,19 @@
         padding: 2.5rem;
         font-family: $font-roboto;
 
-        h2 {
-            font-family: $font-roboto;
-            font-size: 1rem;
-            margin-bottom: 0.2rem;
-        }
+       
 
-        h3 {
-            font-family: $font-playfair;
-            font-size: 1rem;
-            margin-top: 0.2rem;
-        }
-
-        hr {
-            display: block;
-            border: 2px solid $brand-colour;
-            width: 10rem;
-            margin: 0;
-        }
-
-        p {
-            &.lead {
-                font-family: $font-playfair;
-                color: $brand-colour;
-                font-weight: 700;
-            }
-        }
-
-        address {
-            &.address {
-                margin: 1.5rem 0;
-                letter-spacing: 1px;
+        .m-address {
+            margin: 1.5rem 0;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            font-style: normal;
+            text-align: center;
+            & a {
                 font-size: 0.8rem;
-                font-style: normal;
-                text-align: center;
-                & a {
-                    font-size: 0.8rem;
-                }
             }
-        }
+          
+    }
 
         div {
             &.contact {
@@ -66,12 +40,6 @@
             }
         }
 
-        a {
-            color: $dark-text;
 
-            &:hover {
-                color: $brand-colour;
-            }
-        }
     }
 }

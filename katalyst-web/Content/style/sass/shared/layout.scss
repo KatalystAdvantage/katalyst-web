@@ -19,3 +19,16 @@
         width: 980px;
     }
 }
+
+
+       hr {
+            display: block;
+            border: 2px solid $brand-colour;
+            width: 10rem;
+            margin: 0;
+
+            &.thin {
+                border: 1px solid $brand-colour;
+                margin: 1.2rem 0;
+            }
+        }

@@ -186,7 +186,6 @@
     <Content Include="Content\style\sass\global\variables.scss" />
     <Content Include="Content\style\sass\global\bootstrap-grid.scss" />
     <Content Include="Content\style\sass\style.scss" />
-    <Content Include="Content\style\sass\sections\main.scss" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -220,7 +219,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Content\style\sass\sections\landing.scss" />
-    <Content Include="Content\style\sass\sections\change.scss" />
+    <Content Include="Content\style\sass\sections\home.scss" />
     <Content Include="Content\style\sass\sections\team.scss" />
     <Content Include="Content\style\sass\sections\clients.scss" />
     <Content Include="Content\style\sass\sections\contact.scss" />
