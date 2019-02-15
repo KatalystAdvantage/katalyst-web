@@ -31,7 +31,7 @@
     offsetHomePage: function () {
         let $main = $('main'),
             $mainHeight = $main.height(),
-            $section01 = $('[data-page-section="change"]');
+            $section01 = $('[data-page-section="home"]');
 
         $section01Offset = $section01.css('padding-top', $mainHeight + 20);
 
