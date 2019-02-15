@@ -1,0 +1,22 @@
+﻿
+
+.m-section-title {
+    font-size: 4rem;
+    font-family: $font-playfair;
+    font-weight: 400;
+    padding: 0;
+    transform: translateY(-20%);
+    span {
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+
+
+.m-header-secondary {
+    font-family: $font-playfair;
+    font-size: 22px;
+    line-height: 22px
+}

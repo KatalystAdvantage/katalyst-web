@@ -1,11 +1,21 @@
-.l-content {
+.l-content { // this is in the header
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  outline: 1px solid blue;
   @include mobile {
     padding-left: 38px;
     padding-right: 38px;
   }
+}
+
+.l-container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px;
+    @include desktop {
+        width: 980px;
+    }
 }

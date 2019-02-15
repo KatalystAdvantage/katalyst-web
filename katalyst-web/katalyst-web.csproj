@@ -208,13 +208,14 @@
     <Content Include="Views\StaticPage\Home\Clients.cshtml" />
     <Content Include="Views\StaticPage\Home\Contact.cshtml" />
     <Content Include="Views\Shared\_Nav.cshtml" />
-    <Content Include="Views\Animations\_Logo.cshtml" />
+    <Content Include="Views\Shared\_Logo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
     <Folder Include="Content\style\css\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Animations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -230,6 +231,7 @@
     <Content Include="Content\style\sass\shared\header.scss" />
     <Content Include="Content\style\sass\shared\layout.scss" />
     <Content Include="Content\style\sass\shared\nav.scss" />
+    <Content Include="Content\style\sass\global\typography.scss" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>

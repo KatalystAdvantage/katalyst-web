@@ -9,6 +9,7 @@ section, main {
     width: 100vw;
     background: red;
     transition: height 0.75s ease-in;
+    font-family: $font-roboto;
 
 }
 
@@ -57,10 +58,4 @@ cite {
         font-size: 20px;
         line-height: 20px;
     }
-}
-
-.m-header-secondary {
-    font-family: $font-playfair;
-    font-size: 22px;
-    line-height: 22px
 }
