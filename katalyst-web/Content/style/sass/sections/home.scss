@@ -1,29 +1,26 @@
 ﻿section {
-    &[data-page-section="change"]{
+    &[data-page-section="home"]{
+        @include flexColumn;
         background: url('../../img/bg/bg-2.jpg') no-repeat top center;
         background-size:cover;
         padding: 2.5rem;
-        font-family: $font-roboto;
         text-align: center;
 
-        @include flexColumn;
-
-        p {
-            &.title {
-                font-size: 0.85rem;
-                font-weight: bold;
-                margin: 0;
-            }
-        }
-
-        h2 {
+        .m-section-title {
             font-size: 4rem;
             font-family: $font-playfair;
             font-weight: 400;
             padding: 0;
             transform: translateY(-20%);
+            span {
+                font-size: 0.85rem;
+                font-weight: bold;
+                margin: 0;
+                border: 0;
+            }
         }
     }
+
     #change-logo-animation {
         border: 1px solid black;
         width: calc(595px/2);

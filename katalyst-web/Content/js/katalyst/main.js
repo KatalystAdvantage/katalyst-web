@@ -1,7 +1,9 @@
 ﻿
 $(document).ready(function () {
-        headerHelper.init();
-        awardsHelper.init();
-        change.init();
+    headerHelper.init();
+    navHelper.init();
+    landingHelper.init();
+    awardsHelper.init();
+    change.init();
 });
 

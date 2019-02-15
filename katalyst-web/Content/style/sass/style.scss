@@ -5,21 +5,21 @@
 @import "global/variables.scss";
 @import "global/mixins.scss";
 @import "global/base.scss";
+@import "global/typography.scss";
 
 /*=============================================================================================== */
 /*   IMPORT COMPONENTS   ======================================================================== */
 /*=============================================================================================== */
 @import "shared/layout.scss";
 @import "shared/header.scss";
-@import "shared/footer.scss";
 @import "shared/nav.scss";
+@import "shared/footer.scss";
 
 /*=============================================================================================== */
 /*   IMPORT PAGES   ============================================================================= */
 /*=============================================================================================== */
 @import "sections/landing.scss";
-@import "sections/main.scss";
-@import "sections/change.scss";
+@import "sections/home.scss";
 @import "sections/team.scss";
 @import "sections/clients.scss";
 @import "sections/contact.scss";

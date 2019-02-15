@@ -1,0 +1,33 @@
+﻿
+// SECTION TITLES
+.m-section-title {
+      font-family: $font-roboto;
+      font-size: 1rem;
+      margin-bottom: 45px;
+      text-transform: uppercase;
+      display: inline-block;
+    span {
+        border-top: 4px solid $brand-colour;
+        font: 400 1rem $font-playfair;
+        margin-top: 10px;
+        padding-top: 10px;
+        display: block;
+        text-transform: capitalize;
+    }
+}
+
+.m-header-secondary {
+    font-family: $font-playfair;
+    font-size: 22px;
+    line-height: 22px
+}
+
+
+.m-section-text {
+    font-size: 1.3rem;
+    font-family: $font-playfair;
+    color: $brand-colour;
+    font-weight: 700;
+}
+
+       
