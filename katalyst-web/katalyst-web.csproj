@@ -200,8 +200,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Views\StaticPage\Home\Change.cshtml" />
     <Content Include="Views\StaticPage\Home\Home.cshtml" />
+    <Content Include="Views\StaticPage\Home\Landing.cshtml" />
     <Content Include="Views\StaticPage\Home\Services.cshtml" />
     <Content Include="Views\StaticPage\Home.cshtml" />
     <Content Include="Views\StaticPage\Home\Team.cshtml" />

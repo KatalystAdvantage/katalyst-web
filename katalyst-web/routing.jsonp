@@ -1,21 +1,10 @@
 ﻿urlNavHelper.parseRoutes( [
   {
-    "PageName": "main",
+    "PageName": "home",
     "ParentPage": "Home",
     "Url": "",
     "View": "Home",
-    "SubView": "Main",
-    "Controller": "StaticPage",
-    "Method": "StaticPage",
-    "PageTitle": "",
-    "PageDescription": ""
-  },
-  {
-    "PageName": "change",
-    "ParentPage": "Home",
-    "Url": "change",
-    "View": "Home",
-    "SubView": "Change",
+    "SubView": "Home",
     "Controller": "StaticPage",
     "Method": "StaticPage",
     "PageTitle": "",
@@ -23,7 +12,7 @@
   },
   {
     "PageName": "services",
-    "ParentPage": "Home",
+    "ParentPage": "services",
     "Url": "services",
     "View": "Home",
     "SubView": "Services",
