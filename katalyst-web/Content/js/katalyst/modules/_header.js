@@ -30,11 +30,14 @@
     collapseMainToNav: function(){
         let $main = $('main'),
             $section01 = $('[data-page-section="change"]'),
-            $mainHeight = $main.height();
+            $mainHeight = $main.height(),
+            $logo = $('.m-title');
 
             // offset the first subsection margin-top by main section height
             if($("html:not([data-scroll='0'])")){
                 $section01Offset = $section01.css('padding-top', $mainHeight + 20);
+                $logo.css('transform', 'scale(0.7)');
+
 
             };
 

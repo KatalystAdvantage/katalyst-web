@@ -1,6 +1,10 @@
 ﻿var landingHelper = {
     init: function () {
 
-       // $('main').css('height', 0);
+        $('.m-down-arrow').click(function () {
+            headerHelper.collapseMainToNav();
+            smoothScroll.scrollTo($('[data-page-section="contact"]'));
+        });
+
     }
 };
