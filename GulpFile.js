@@ -31,6 +31,10 @@ gulp.task('styles_mapped', function () {
         .pipe(gulp.dest(paths.prod.css));
 });
 
+
+
+
+
 gulp.task('styles_minified', function () {
     return gulp.src(paths.src.scss + '*.scss')
         .pipe(plumber({ errorHandler: onError }))
@@ -39,8 +43,8 @@ gulp.task('styles_minified', function () {
         .pipe(gulp.dest(paths.prod.css));
 });
 
-gulp.task('watch', ['styles_minified'], function () {
-    gulp.watch(paths.src.scss + '**/*.scss', ["styles_minified"]);
+gulp.task('watch', ['styles_mapped'], function () {
+    gulp.watch(paths.src.scss + '**/*.scss', ["styles_mapped"]);
 });
 
 gulp.task('default', ['styles_minified']);
