@@ -32,9 +32,6 @@ gulp.task('styles_mapped', function () {
 });
 
 
-
-
-
 gulp.task('styles_minified', function () {
     return gulp.src(paths.src.scss + '*.scss')
         .pipe(plumber({ errorHandler: onError }))

@@ -7,6 +7,7 @@ $body-size: 17px;
 $body-size-m: 16px;
 
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto+Condensed:400,700');
-$font-roboto: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto+Condensed:400,700|Roboto:400,500,700');
+$font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
+$font-robotoCondensed: 'Roboto Condensed',serif;
 $font-playfair: 'Playfair Display', Arial, Helvetica, serif;
